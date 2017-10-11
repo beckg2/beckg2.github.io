@@ -3,7 +3,7 @@
 describe('Controller: AboutCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('beckg2githubioApp'));
+  beforeEach(module('wats4000ProjectBootstrapYourAppApp'));
 
   var AboutCtrl,
     scope;

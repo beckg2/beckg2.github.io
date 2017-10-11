@@ -2,18 +2,16 @@
 
 /**
  * @ngdoc overview
- * @name beckg2githubioApp
+ * @name wats4000ProjectBootstrapYourAppApp
  * @description
- * # beckg2githubioApp
+ * # wats4000ProjectBootstrapYourAppApp
  *
  * Main module of the application.
  */
 angular
-  .module('beckg2githubioApp', [
+  .module('wats4000ProjectBootstrapYourAppApp', [
     'ngAnimate',
-    'ngAria',
     'ngCookies',
-    'ngMessages',
     'ngResource',
     'ngRoute',
     'ngSanitize',

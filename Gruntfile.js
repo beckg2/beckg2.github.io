@@ -1,4 +1,4 @@
-// Generated on 2017-10-11 using generator-angular 0.16.0
+// Generated on 2017-07-17 using generator-angular 0.16.0
 'use strict';
 
 // # Globbing
@@ -16,7 +16,8 @@ module.exports = function (grunt) {
   require('jit-grunt')(grunt, {
     useminPrepare: 'grunt-usemin',
     ngtemplates: 'grunt-angular-templates',
-    cdnify: 'grunt-google-cdn'
+    cdnify: 'grunt-google-cdn',
+    buildcontrol: 'grunt-build-control'
   });
 
   // Configurable paths for the application
@@ -30,6 +31,21 @@ module.exports = function (grunt) {
 
     // Project settings
     yeoman: appConfig,
+
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:beckg2/beckg2.github.io.git',
+          branch: 'gh-pages'
+        }
+      }
+    },
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
@@ -50,7 +66,7 @@ module.exports = function (grunt) {
       },
       sass: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['sass:server', 'autoprefixer']
+        tasks: ['compass:server', 'autoprefixer:server']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -227,28 +243,28 @@ module.exports = function (grunt) {
     },
 
     // Compiles Sass to CSS and generates necessary files if requested
-    compass: {
+    sass: {
       options: {
         includePaths: [
-            'bower_components'
+          'bower_components'
         ]
       },
       dist: {
         files: [{
-            expand: true,
-            cwd: '<%= yeoman.app %>/styles',
-            src: ['*.scss'],
-            dest: '.tmp/styles',
-            ext: '.css'
+          expand: true,
+          cwd: '<%= yeoman.app %>/styles',
+          src: ['*.scss'],
+          dest: '.tmp/styles',
+          ext: '.css'
         }]
       },
       server: {
         files: [{
-            expand: true,
-            cwd: '<%= yeoman.app %>/styles',
-            src: ['*.scss'],
-            dest: '.tmp/styles',
-            ext: '.css'
+          expand: true,
+          cwd: '<%= yeoman.app %>/styles',
+          src: ['*.scss'],
+          dest: '.tmp/styles',
+          ext: '.css'
         }]
       }
     },
@@ -369,7 +385,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       dist: {
         options: {
-          module: 'beckg2githubioApp',
+          module: 'wats4000ProjectBootstrapYourAppApp',
           htmlmin: '<%= htmlmin.dist.options %>',
           usemin: 'scripts/scripts.js'
         },

@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name beckg2githubioApp.controller:AboutCtrl
+ * @name wats4000ProjectBootstrapYourAppApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the beckg2githubioApp
+ * Controller of the wats4000ProjectBootstrapYourAppApp
  */
-angular.module('beckg2githubioApp')
+angular.module('wats4000ProjectBootstrapYourAppApp')
   .controller('AboutCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
