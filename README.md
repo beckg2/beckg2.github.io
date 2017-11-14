@@ -1,12 +1,16 @@
-# beckg2githubio
+George Beck - Portfolio
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.16.0.
+Welcome to my portfolio repository.
 
-## Build & development
+Included:
 
-Run `grunt` for building and `grunt serve` for preview.
+Personal statement
+Collection of projects
+Links to connect with me
+Attribution
 
-## Testing
+This portfolio was created using the Freelancer theme created by Start Bootstrap. This is a free template and theme released under the MIT license. This theme has been altered by George Beck to create a personal portfolio.
 
-Running `grunt test` will run the unit tests with karma.
+Copyright and License
+
+Copyright 2013-2017 Blackrock Digital LLC. Code released under the MIT license.
